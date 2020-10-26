@@ -1,0 +1,8 @@
+<%= form_with( url: game_create_path, local: true) do |form| %>
+<%= label_tag("Enter max allowable number of guesses:") %>
+<%= text_field_tag( :availguesses, placeholder="7") %>
+<% if flash[:message] %>
+  <p><%= flash[:message] %></p>
+<% end %>
+<%= submit_tag 'New Game' %>
+<% end %>
